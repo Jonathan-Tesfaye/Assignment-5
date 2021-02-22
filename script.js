@@ -1,21 +1,21 @@
 //The radius variable is given here
 let r = 0
 let answer = 0
-document.getElementById('input').addEventListener('click', comparison)
+document.getElementById('button').addEventListener('click', area)
+document.getElementById('button2').addEventListener('click', circumference)
 //A function is created to calculate area or circumference
-function comparison () {
+function area () {
   r = document.getElementById('input').value
-  comparison = parseInt(comparison)
+  area = parseInt(area)
   r = parseInt(r)
-  //If statements were created to distinguise area and circumference
-  if(document.getElementById('button1').onclick) {
-  answer = r * r * Math.Pi
+  answer = Math.PI * (r * r)
   document.getElementById('answers').innerHTML = answer
-  } else if(document.getElementById('button2').onclick) {
-  answer = 2 * Math.Pi * r
+}
+
+function circumference () {
+ r = document.getElementById('input').value
+  circumference = parseInt(circumference)
+  r = parseInt(r)
+  answer = 2 * Math.PI * r
   document.getElementById('answers').innerHTML = answer
-  } else {
-  answer = 12
-  document.getElementById('answers').innerHTML = answer
-  }
 }
