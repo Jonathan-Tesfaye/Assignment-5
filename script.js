@@ -10,7 +10,7 @@ function area () {
   d = parseInt(d)
   r = d / 2
   answer = Math.PI * (r * r)
-  document.getElementById('answers').innerHTML = answer
+  document.getElementById('answers').innerHTML = Math.round(answer * 10) / 10; 
 }
 // Another function is created for the other button
 function circumference () {
@@ -18,5 +18,5 @@ function circumference () {
   d = parseInt(d)
   r = d / 2
   answer = 2 * Math.PI * r
-  document.getElementById('answers').innerHTML = answer
+  document.getElementById('answers').innerHTML = Math.round(answer * 10) / 10;
 }
